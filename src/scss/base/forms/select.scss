@@ -1,0 +1,333 @@
+//========================================================================================================================================================
+// <SELECT>
+.select {
+	min-width: 0;
+	position: relative;
+	// .select__body
+	&__body {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		background-color: #fff;
+		cursor: pointer;
+		width: 100%;
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		height: toRem(30);
+		// padding: 0 toRem(15);
+		padding-left: toRem(15);
+		gap: toRem(8);
+		> * {
+			flex: 1 1 auto;
+		}
+		&:after {
+			@extend %ic;
+			content: "\e904";
+			align-self: stretch;
+			flex: 0 0 10px;
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+		&::before {
+			@extend %ic;
+		}
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// .select__content
+	&__content {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	// .select__input
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		position: absolute;
+		top: calc(100% - toRem(1));
+		border-radius: 3px;
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		border-top: 0;
+		// border: 1px solid #d9d9d9;
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		padding: 5px 0px;
+	}
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальна висота
+		max-height: toRem(200);
+		// Стилі скроллбару
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		padding: 5px 15px;
+		color: inherit;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		&._select-selected {
+			background-color: #eee;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(#d9d9d9, 0.3);
+			}
+		}
+	}
+	// Конструкція додаткових даних
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__asset {
+	}
+	&__text {
+	}
+	&--show-top {
+		.select__options {
+			top: auto;
+			bottom: calc(100% - toRem(1));
+			border: 1px solid #d9d9d9;
+			border-bottom: 0;
+			border-radius: 4px 4px 0 0;
+			padding: 5px 0px 10px 0px;
+		}
+	}
+	// Стан селекту
+	&._select-open {
+	}
+	&._select-disabled {
+	}
+	&._select-active {
+	}
+	&._select-focus {
+	}
+	&._select-multiple {
+	}
+	&._select-checkbox {
+	}
+	// ========================================================================================================================================================
+	// Select Search
+	&_search {
+		.select__value {
+			height: toRem(40);
+			@media (max-width: $mobile) {
+				height: toRem(30);
+			}
+		}
+		.select__options {
+			left: toRem(4);
+		}
+		.select__value {
+			padding-left: toRem(24);
+			@media (max-width: $mobile) {
+				padding-left: toRem(12);
+			}
+		}
+		.select__option {
+			padding: toRem(5) toRem(10);
+		}
+	}
+	// Select Sort
+	&_sort {
+		.select__title {
+			background-color: transparent;
+			color: $neutral100Color !important;
+		}
+		.select__value {
+			font-weight: 600;
+			padding: toRem(0);
+			&::after {
+				font-weight: 700;
+			}
+		}
+		.select__options {
+			padding: toRem(0);
+		}
+		.select__option {
+			padding: toRem(5);
+		}
+		.select__content {
+			display: flex;
+			align-items: center;
+			height: toRem(30);
+		}
+	}
+	// Select Account
+	&_account {
+		.select__title {
+			background-color: transparent;
+		}
+		.select__scroll {
+			display: grid;
+			gap: toRem(5);
+		}
+		.select__options {
+			box-shadow: none;
+			padding: toRem(5) toRem(0);
+			top: calc(115% - toRem(1));
+			background-color: transparent;
+			&::before {
+				content: "";
+				height: 100%;
+				top: toRem(0);
+				left: toRem(-5);
+				right: toRem(0);
+				width: toRem(66);
+				bottom: toRem(0);
+				position: absolute;
+				border-radius: toRem(5);
+				background-color: #2d2c2c;
+				box-shadow: rgba(0, 0, 0, 0.16) toRem(0) toRem(1) toRem(4);
+			}
+			@media (min-width: $mobile) {
+				max-width: toRem(56);
+				min-width: toRem(56);
+			}
+			@media (max-width: $mobile) {
+				&::before {
+					width: toRem(55);
+				}
+			}
+		}
+		.select__option {
+			padding: toRem(0);
+			text-align: center;
+			background-color: transparent;
+			transition: opacity 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+			@media (min-width: $mobile) {
+				width: toRem(56);
+			}
+		}
+		.select__value {
+			height: auto;
+			padding: toRem(0);
+			&::after {
+				font-weight: 600;
+				font-size: toRem(20);
+			}
+			@media (max-width: $mobile) {
+				gap: toRem(0);
+				&::after {
+					display: none;
+				}
+			}
+		}
+		.select__asset {
+			width: toRem(56);
+			overflow: hidden;
+			border-radius: 50%;
+			img {
+				max-width: 100%;
+				transform: scale(1.03);
+			}
+			@media (max-width: $mobile) {
+				width: toRem(45);
+			}
+		}
+	}
+	// Select Period
+	&_period {
+		&._select-open {
+			.select__title {
+				border-radius: toRem(10) toRem(10) toRem(0) toRem(0);
+			}
+		}
+		.select__title {
+			font-weight: 600;
+			line-height: 150%;
+			color: $primary100Color;
+			border-radius: toRem(100);
+			background-color: $neutral90Color;
+			border: toRem(1) solid $primary100Color;
+			transition: border-radius 0.2s ease 0s;
+		}
+		.select__value {
+			height: toRem(55);
+			padding: toRem(0) toRem(25);
+			&::before {
+				content: "\e910";
+				font-size: toRem(20);
+				margin-top: toRem(1.5);
+			}
+			&::after {
+				font-weight: 600;
+				font-size: toRem(20);
+				margin-top: toRem(3);
+			}
+			@media (max-width: $mobile) {
+				height: toRem(40);
+				padding: toRem(0) toRem(15);
+			}
+		}
+		.select__options {
+			background-color: $neutral100Color;
+			border: toRem(1) solid $primary100Color;
+			border-radius: toRem(0) toRem(0) toRem(10) toRem(10);
+		}
+		.select__option {
+			color: $primary100Color;
+			padding: toRem(8) toRem(15);
+			@media (any-hover: hover) {
+				&:hover {
+					color: $neutral10Color;
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Тег
+._select-tag {
+	cursor: pointer;
+}
+//========================================================================================================================================================

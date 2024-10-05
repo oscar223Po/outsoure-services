@@ -1,0 +1,50 @@
+//========================================================================================================================================================
+// Checkbox
+.checkbox {
+	position: relative;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 15, 10);
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .checkbox__label:before {
+		}
+		&:checked + .checkbox__label:before {
+			background-color: $primary100Color;
+			border: 2px solid $primary100Color;
+		}
+	}
+	// .checkbox__label
+	&__label {
+		gap: 8px;
+		cursor: pointer;
+		position: relative;
+		display: inline-flex;
+		&:before {
+			width: 16px;
+			@extend %ic;
+			height: 16px;
+			display: flex;
+			flex: 0 0 16px;
+			font-weight: 800;
+			content: "\e90d";
+			border-radius: 4px;
+			align-items: center;
+			font-size: toRem(12);
+			color: $neutral10Color;
+			align-self: flex-start;
+			justify-content: center;
+			transition: all 0.15s ease 0s;
+			border: 2px solid $neutral40Color;
+		}
+	}
+	// .checkbox__text
+	&__text {
+		align-self: center;
+	}
+}
+//========================================================================================================================================================

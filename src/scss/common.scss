@@ -1,0 +1,1081 @@
+//========================================================================================================================================================
+// Заголовки, загальні БЕМ блоки та інше...
+//========================================================================================================================================================
+::-webkit-scrollbar {
+	width: toRem(1);
+	border-radius: toRem(10);
+	background-color: $neutral90Color;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: toRem(10);
+	background-color: $neutral10Color;
+}
+::selection {
+	background-color: rgba(#a60101, 0.5);
+}
+summary {
+	list-style: none;
+	&::marker {
+		display: none;
+	}
+}
+@supports (-webkit-appearance: none) {
+	summary::-webkit-details-marker {
+		display: none;
+	}
+}
+//========================================================================================================================================================
+// Styles For Page
+.page {
+	&--padding-bottom {
+		@include adaptiveValue("padding-bottom", 55, 30);
+	}
+}
+//========================================================================================================================================================
+// Search Input Big
+.search {
+	&__main {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__input {
+		width: 100%;
+		outline: none;
+		min-height: toRem(72);
+		padding-left: toRem(24);
+		border-radius: toRem(100);
+		padding-right: toRem(272);
+		background-color: $neutral10Color;
+		&::placeholder {
+			color: $neutral60Color;
+			transition: opacity 0.3s;
+		}
+		&:focus::placeholder {
+			opacity: 0;
+		}
+		@media (max-width: $mobile) {
+			min-height: toRem(60);
+			border-radius: toRem(30);
+			padding-right: toRem(210);
+		}
+		@media (max-width: $mobileSmall) {
+			padding-right: toRem(70);
+		}
+	}
+
+	&__select {
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		right: toRem(112);
+		height: toRem(40);
+		position: absolute;
+		border-left: toRem(1) solid $neutral40Color;
+		@media (max-width: $mobile) {
+			right: toRem(70);
+			height: toRem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__button {
+		top: 0;
+		bottom: 0;
+		display: flex;
+		margin: auto 0;
+		right: toRem(8);
+		width: toRem(56);
+		height: toRem(56);
+		border-radius: 50%;
+		position: absolute;
+		align-items: center;
+		font-size: toRem(20);
+		justify-content: center;
+		background-color: $primary100Color;
+		transition: background-color 0.5s ease 0s;
+		border: toRem(1) solid rgba($primary100Color, 0.3);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($warning100Color, 0.5);
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(44);
+			height: toRem(44);
+		}
+	}
+
+	&__tip {
+		line-height: 150%;
+		color: $neutral40Color;
+	}
+}
+//========================================================================================================================================================
+// Styles For Heading Title & Text
+.headed {
+	&--white {
+		color: $neutral10Color;
+		.headed__text {
+			color: $neutral40Color;
+		}
+	}
+	&--center {
+		text-align: center;
+		margin: toRem(0) auto;
+		.headed__label {
+			justify-content: center;
+		}
+	}
+	&--column {
+		display: grid;
+		@include adaptiveValue("row-gap", 18, 12);
+		@media (min-width: $mobile) {
+			justify-content: space-between;
+		}
+	}
+
+	&__main {
+		margin-bottom: toRem(-3);
+	}
+
+	&__label {
+		gap: toRem(4);
+		display: flex;
+		font-weight: 600;
+		line-height: 150%;
+		align-items: center;
+		color: $primary100Color;
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			content: "";
+			display: flex;
+			height: toRem(2);
+			border-radius: toRem(10);
+			background-color: $primary100Color;
+			@include adaptiveValue("width", 36, 24);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 12);
+		}
+	}
+
+	&__text {
+		color: $neutral70Color;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 18);
+		}
+	}
+
+	&__button {
+	}
+}
+.title {
+	font-weight: 500;
+	line-height: 110%;
+	font-family: $fontFamilySecond;
+	&--large {
+		@include adaptiveValue("font-size", 72, 32);
+	}
+
+	&--medium {
+		@include adaptiveValue("font-size", 52, 24);
+	}
+
+	&--normal {
+		line-height: 120%;
+		@include adaptiveValue("font-size", 32, 20);
+	}
+}
+.text {
+	&--large {
+		line-height: 130%;
+		@include adaptiveValue("font-size", 20, 14);
+	}
+
+	&--minimum {
+		line-height: 135%;
+		@include adaptiveValue("font-size", 18, 12);
+	}
+
+	&--normal {
+		line-height: 150%;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+}
+//========================================================================================================================================================
+// Styles For Top Title & Link
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__title {
+	}
+
+	&__link {
+		display: flex;
+		gap: toRem(8);
+		font-weight: 600;
+		line-height: 150%;
+		align-items: center;
+		color: $primary100Color;
+		flex-direction: row-reverse;
+		transition: color 0.3s ease 0s;
+		&::before {
+			font-weight: 600;
+			font-size: toRem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $info100Color;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Tab Navigation
+.navigation {
+	overflow-x: auto;
+	border-bottom: toRem(2) solid $neutral40Color;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 32, 24);
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&__navs {
+		white-space: nowrap;
+	}
+
+	&__title {
+		font-weight: 600;
+		line-height: 150%;
+		position: relative;
+		color: $neutral60Color;
+		padding: toRem(0) toRem(24) toRem(10) toRem(24);
+		@include adaptiveValue("font-size", 16, 12);
+		&._tab-active {
+			color: $neutral100Color;
+			border-bottom: toRem(2) solid $primary100Color;
+		}
+		@media (max-width: $tablet) {
+			padding: toRem(0) toRem(12) toRem(6) toRem(12);
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Course Article
+.course {
+	overflow: hidden;
+	border-radius: toRem(16);
+	@media (max-width: $mobile) {
+		border-radius: toRem(8);
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		display: grid;
+		border-left: toRem(1) solid $neutral40Color;
+		border-right: toRem(1) solid $neutral40Color;
+		border-bottom: toRem(1) solid $neutral40Color;
+		border-radius: toRem(0) toRem(0) toRem(16) toRem(16);
+		@include adaptiveValue("gap", 20, 10, 0, $containerWidth, 767.98);
+		@include adaptiveValue("padding", 24, 12, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			border-radius: toRem(0) toRem(0) toRem(8) toRem(8);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__form {
+		border-bottom: toRem(1.5) solid $neutral40Color;
+		@include adaptiveValue("padding-bottom", 20, 10, 0, $containerWidth, 767.98);
+	}
+
+	&__labels {
+	}
+}
+.form-course {
+	display: flex;
+	gap: toRem(5);
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	&__name {
+		display: flex;
+		line-height: 150%;
+		align-items: center;
+		color: $neutral70Color;
+		&::after {
+			content: "";
+			display: flex;
+			width: toRem(4);
+			height: toRem(4);
+			border-radius: 50%;
+			margin-left: toRem(8);
+			background-color: $neutral40Color;
+		}
+	}
+
+	&__rate {
+		display: flex;
+		gap: toRem(4);
+		line-height: 150%;
+		align-items: center;
+		color: $neutral70Color;
+		&::before {
+			font-size: toRem(20);
+			color: $warning100Color;
+		}
+	}
+
+	&__cost {
+		font-weight: 500;
+		line-height: 120%;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 32, 20);
+	}
+}
+.labels-course {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: toRem(5);
+	align-items: center;
+	column-gap: toRem(10);
+	justify-content: space-between;
+	&__item {
+		display: flex;
+		gap: toRem(4);
+		line-height: 155%;
+		position: relative;
+		align-items: center;
+		font-size: toRem(14);
+		color: $neutral70Color;
+		&::before {
+			font-size: toRem(20);
+			color: $neutral100Color;
+		}
+		@media (min-width: em(1190)) {
+			&:not(:last-child) {
+				&::after {
+					content: "";
+					display: flex;
+					width: toRem(4);
+					height: toRem(4);
+					position: absolute;
+					border-radius: 50%;
+					right: toRem(-10);
+					background-color: $neutral40Color;
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Socials
+.socials {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 40, 15);
+	&__icon {
+		font-size: toRem(24);
+		color: $neutral10Color;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $warning100Color;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Articles
+.articles {
+	&__item {
+		display: grid;
+		gap: toRem(15);
+		align-items: center;
+		border-radius: toRem(16);
+		justify-content: space-between;
+		grid-template-columns: auto auto;
+		background-color: $neutral10Color;
+		border: toRem(1) solid $neutral40Color;
+		@include adaptiveValue("padding", 16, 8, 0, $containerWidth, 767.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+		@media (max-width: toEm(599.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__main {
+		display: grid;
+		align-items: center;
+		grid-template-columns: toRem(190) auto;
+		@include adaptiveValue("gap", 24, 12, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			grid-template-columns: toRem(150) auto;
+		}
+		@media (max-width: toEm(599.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__image {
+		height: 100%;
+		overflow: hidden;
+		border-radius: toRem(8);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(1.03);
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+
+	&__content {
+		height: 100%;
+		display: flex;
+		gap: toRem(12);
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 18);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		gap: toRem(10);
+		flex-wrap: wrap;
+		line-height: 125%;
+		align-items: center;
+		color: $neutral70Color;
+	}
+
+	&__name {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		&::after {
+			content: "";
+			display: flex;
+			width: toRem(4);
+			height: toRem(4);
+			border-radius: 50%;
+			background-color: $neutral40Color;
+		}
+	}
+
+	&__review {
+		display: flex;
+		gap: toRem(4);
+		align-items: center;
+		&::before {
+			font-size: toRem(20);
+			color: $warning100Color;
+		}
+	}
+
+	&__labels {
+		column-gap: toRem(20);
+		justify-content: flex-start;
+	}
+
+	&__price {
+		@media (max-width: toEm(599.98)) {
+			padding: toRem(3);
+			text-align: center;
+			color: $neutral10Color;
+			border-radius: toRem(10);
+			background-color: $primary100Color;
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Pagination
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("margin-top", 32, 16);
+	&__button {
+		display: flex;
+		width: toRem(48);
+		height: toRem(48);
+		align-items: center;
+		font-size: toRem(20);
+		color: $primary100Color;
+		justify-content: center;
+		transition:
+			background-color 0.15s ease 0s,
+			color 0.15s ease 0s;
+		border-radius: toRem(0) toRem(0) toRem(5) toRem(5);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $neutral10Color;
+				background-color: $primary100Color;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+			font-size: toRem(16);
+		}
+		&--prew {
+			transform: rotate(90deg);
+		}
+
+		&--next {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		width: toRem(48);
+		height: toRem(48);
+		position: relative;
+		align-items: center;
+		font-size: toRem(14);
+		color: $neutral90Color;
+		justify-content: center;
+		background-color: $neutral10Color;
+		transition: background-color 0.15s ease 0s;
+		&::before {
+			content: "";
+			left: toRem(0);
+			right: toRem(0);
+			width: toRem(0);
+			height: toRem(4);
+			bottom: toRem(0);
+			position: absolute;
+			margin: toRem(0) auto;
+			background-color: $primary100Color;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $neutral30Color;
+			}
+		}
+		&--active {
+			&::before {
+				width: toRem(16);
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+			&--active {
+				&::before {
+					height: toRem(3);
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Bander
+.bander {
+	background-color: $neutral100Color;
+	@include adaptiveValue("padding-top", 150, 100);
+	@include adaptiveValue("padding-bottom", 55, 30);
+	::-webkit-scrollbar {
+		height: toRem(3);
+		border-radius: toRem(10);
+		background-color: $neutral80Color;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: toRem(10);
+		background-color: $warning100Color;
+	}
+}
+//========================================================================================================================================================
+// Styles For Developer
+.developer {
+	width: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	@include adaptiveValue("padding-top", 48, 24);
+	@include adaptiveValue("padding-bottom", 48, 24);
+	&--white {
+		.developer__name {
+			color: $neutral10Color;
+		}
+		.developer__count {
+			color: $neutral40Color;
+		}
+		.developer__hours {
+			color: $neutral20Color;
+		}
+	}
+	&__main {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__icon {
+		display: flex;
+		overflow: hidden;
+		width: toRem(100);
+		height: toRem(100);
+		border-radius: 50%;
+		margin: toRem(0) auto;
+		justify-content: center;
+		img {
+			max-width: 100%;
+			transform: scale(1.05);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(90);
+			height: toRem(90);
+		}
+	}
+
+	&__name {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(4);
+		}
+	}
+
+	&__count {
+		line-height: 155%;
+		font-size: toRem(14);
+		color: $neutral70Color;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__hours {
+		font-weight: 500;
+		line-height: 120%;
+		color: $neutral90Color;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 32, 20);
+		span {
+			line-height: 150%;
+			font-size: toRem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__label {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		justify-content: center;
+		color: $primary100Color;
+		border-radius: toRem(30);
+		padding: toRem(5) toRem(12);
+		border: toRem(1) solid $primary100Color;
+		@media (max-width: $mobileSmall) {
+			width: toRem(36);
+			height: toRem(36);
+			padding: toRem(0);
+			border-radius: toRem(10);
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__svg {
+		display: flex;
+		width: toRem(20);
+		height: toRem(20);
+		align-items: center;
+		justify-content: center;
+	}
+}
+//========================================================================================================================================================
+// Styles For Breadcrumps
+.breadcrumps {
+	// .breadcrumps__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	// .breadcrumps__item
+	&__item {
+	}
+	&__link,
+	&__current {
+		display: flex;
+		align-items: center;
+		font-size: toRem(14);
+		transition: color 0.1s ease 0s;
+		&::before {
+			display: flex;
+			width: toRem(24);
+			font-weight: 700;
+			height: toRem(24);
+			align-items: center;
+			color: $neutral10Color;
+			justify-content: center;
+			transform: rotate(-90deg);
+		}
+	}
+	// .breadcrumps__link
+	&__link {
+		color: $neutral60Color;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $neutral30Color;
+			}
+		}
+	}
+	// .breadcrumps__current
+	&__current {
+		color: $neutral10Color;
+	}
+}
+//========================================================================================================================================================
+// Styles For Rewiev Blocks
+.blocks-reviews {
+	display: grid;
+	@include adaptiveValue("gap", 32, 12);
+	@media (min-width: $mobileSmall) {
+		grid-template-columns: repeat(auto-fill, minmax(toRem(350), 1fr));
+	}
+	// .blocks-reviews__block
+	&__block {
+	}
+	// .blocks-reviews__head
+	&__head {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 12);
+		}
+	}
+	// .blocks-reviews__text
+	&__text {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 12);
+		}
+	}
+	// .blocks-reviews__rate
+	&__rate {
+	}
+}
+//========================================================================================================================================================
+// Styles For User
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// .user__body
+	&__body {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+	}
+	// .user__image
+	&__image {
+		overflow: hidden;
+		height: toRem(48);
+		border-radius: 50%;
+		max-width: toRem(48);
+		min-width: toRem(48);
+		img {
+			width: 100%;
+		}
+	}
+	// .user__content
+	&__content {
+		h5 {
+			font-weight: 500;
+			line-height: 135%;
+			@include adaptiveValue("font-size", 18, 16);
+		}
+		span {
+			font-size: 16px;
+			line-height: 150%;
+			color: $neutral70Color;
+			@include adaptiveValue("font-size", 16, 14);
+		}
+	}
+	// .user__svg
+	&__svg {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("width", 32, 24);
+		@include adaptiveValue("height", 32, 24);
+	}
+}
+//========================================================================================================================================================
+// Styles For Several Blocks
+.back-main {
+	background-color: $neutral10Color;
+	border: toRem(1) solid $neutral40Color;
+	@include adaptiveValue("padding", 24, 12);
+	@include adaptiveValue("border-radius", 16, 8);
+}
+.img-st {
+	overflow: hidden;
+	border-radius: toRem(8);
+	img {
+		width: 100%;
+		transform: scale(1.01);
+	}
+}
+.dot {
+	display: flex;
+	gap: toRem(8);
+	flex-wrap: wrap;
+	min-height: toRem(27);
+	span {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		&:not(:last-child) {
+			&::after {
+				content: "";
+				width: toRem(4);
+				height: toRem(4);
+				border-radius: 50%;
+				background-color: $neutral90Color;
+			}
+		}
+	}
+}
+.items {
+	display: grid;
+	@include adaptiveValue("gap", 16, 8);
+	// .items__item
+	&__item {
+		display: flex;
+		gap: toRem(8);
+		line-height: 150%;
+		align-items: center;
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			display: flex;
+			height: toRem(20);
+			align-items: center;
+			font-size: toRem(20);
+			min-width: toRem(20);
+			justify-content: center;
+		}
+	}
+	// .items__item-inner
+	&__item-inner {
+	}
+}
+//========================================================================================================================================================
+// Circles
+.examine-circle {
+	&::part(base) {
+		height: 100%;
+		min-width: 160px;
+		max-width: 160px;
+	}
+	&::part(circle) {
+		stroke-width: 7px;
+		stroke: $neutral90Color;
+	}
+	&::part(value) {
+		stroke-width: 7px;
+		stroke-linecap: round;
+		stroke: $primary100Color;
+	}
+	&::part(text) {
+		fill: $neutral20Color;
+		@include adaptiveValue("font-size", 24, 18);
+	}
+}
+.module-circle {
+	&::part(base) {
+		height: 100%;
+		min-width: 64px;
+		max-width: 64px;
+	}
+	&::part(circle) {
+		stroke-width: 4px;
+		stroke: $neutral40Color;
+	}
+	&::part(value) {
+		stroke-width: 4px;
+		stroke-linecap: round;
+		stroke: $primary100Color;
+	}
+	&::part(text) {
+		font-size: toRem(24);
+		fill: $neutral90Color;
+	}
+}
+//========================================================================================================================================================
+// Module
+.module {
+	display: grid;
+	@include adaptiveValue("gap", 24, 16);
+	// .module__head
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: toRem(1) solid $neutral40Color;
+		@include adaptiveValue("padding-bottom", 24, 16);
+	}
+	// .module__content
+	&__content {
+	}
+	// .module__title
+	&__title {
+		font-weight: 500;
+		line-height: 135%;
+		@include adaptiveValue("font-size", 18, 16);
+	}
+	// .module__create
+	&__create {
+		line-height: 155%;
+		color: $neutral70Color;
+		@include adaptiveValue("font-size", 14, 12);
+		&.dot {
+			span {
+				&::after {
+					background-color: $neutral70Color;
+				}
+			}
+		}
+	}
+	// .module__buttons
+	&__buttons {
+		display: grid;
+		@include adaptiveValue("gap", 16, 8);
+	}
+	// .module__button
+	&__button {
+		width: 100%;
+		display: flex;
+		line-height: 150%;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			display: flex;
+			font-weight: 700;
+			width: toRem(20);
+			height: toRem(20);
+			align-items: center;
+			font-size: toRem(16);
+			justify-content: center;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $error80Color;
+			}
+		}
+		// .module__button--done
+		&--done {
+			pointer-events: none;
+			&::before {
+				color: $primary100Color;
+			}
+		}
+	}
+	// .module__more
+	&__more {
+	}
+	// .module__more
+	&__more {
+		display: flex;
+		justify-content: center;
+	}
+	// .module__more-link
+	&__more-link {
+		display: flex;
+		gap: toRem(8);
+		font-weight: 600;
+		line-height: 150%;
+		align-items: center;
+		color: $neutral100Color;
+		flex-direction: row-reverse;
+		@include adaptiveValue("gap", 8, 4);
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			font-weight: 700;
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================

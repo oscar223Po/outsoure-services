@@ -1,0 +1,342 @@
+//========================================================================================================================================================
+// Header
+.header {
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	position: fixed;
+	color: $neutral10Color;
+	background-color: $neutral100Color;
+	border-bottom: toRem(1) solid $neutral80Color;
+	&__container {
+		display: flex;
+		align-items: center;
+		min-height: toRem(96);
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			min-height: toRem(75);
+		}
+	}
+
+	&__main {
+	}
+
+	&__actions {
+		z-index: 1;
+		position: relative;
+	}
+}
+.main-header {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 60, 35, 0, $containerWidth, 991.98);
+	@media (max-width: $mobile) {
+		gap: toRem(0);
+	}
+	&__logo {
+		z-index: 1;
+		display: flex;
+		gap: toRem(8);
+		font-weight: 800;
+		align-items: end;
+		line-height: 150%;
+		height: toRem(36);
+		position: relative;
+		font-size: toRem(24);
+		font-family: $fontFamilyThird;
+		&::before {
+			font-size: toRem(32);
+			padding-bottom: toRem(6);
+		}
+		@media (max-width: $mobileSmall) {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__menu {
+	}
+}
+.actions-header {
+	display: flex;
+	gap: toRem(16);
+	align-items: center;
+	@media (max-width: $mobile) {
+		gap: toRem(10);
+	}
+	&__button {
+		width: toRem(56);
+		height: toRem(56);
+		border-radius: 50%;
+		background-color: $neutral90Color;
+		transition: background-color 0.3s ease 0s;
+		svg {
+			width: toRem(20);
+			height: toRem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $neutral70Color;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(45);
+			height: toRem(45);
+		}
+	}
+
+	&__account {
+	}
+
+	&__icon {
+	}
+}
+//========================================================================================================================================================
+// More
+.more {
+	position: relative;
+	@media (min-width: toEm(1025.98)) {
+		display: none;
+	}
+	@media (max-width: $mobile) {
+		display: none;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.more__list {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__button {
+		width: toRem(30);
+		height: toRem(30);
+		align-items: center;
+		font-size: toRem(20);
+		border-radius: toRem(5);
+		justify-content: center;
+		transform: rotate(90deg);
+		background-color: $neutral90Color;
+		box-shadow: rgba(0, 0, 0, 0.16) toRem(0) toRem(1) toRem(4);
+	}
+
+	&__list {
+		opacity: 0;
+		z-index: 3;
+		top: toRem(35);
+		left: toRem(0);
+		visibility: hidden;
+		position: absolute;
+		white-space: nowrap;
+		display: inline-block;
+		border-radius: toRem(3);
+		color: $neutral100Color;
+		padding: toRem(10) toRem(12);
+		background-color: $neutral10Color;
+		transition:
+			opacity 0.5s ease 0s,
+			visibility 0.5s ease 0s;
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primary100Color;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Heading Of Log In & Sign In
+//========================================================================================================================================================
+// Heading
+.heading {
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+	color: $neutral10Color;
+	@media (min-width: $mobile) {
+		transition: background-color 0.5s ease 0s;
+		&._heading-scroll {
+			transition: background-color 0.5s ease 0s;
+			background-color: rgba($neutral100Color, 0.7);
+			border-bottom: toRem(1) solid $neutral80Color;
+			.heading__container-min {
+				min-height: toRem(80);
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		background-color: rgba($neutral100Color, 0.7);
+		border-bottom: toRem(1) solid rgba($neutral10Color, 0.25);
+	}
+	&__container-min {
+		display: flex;
+		align-items: center;
+		min-height: toRem(96);
+		justify-content: space-between;
+		transition: min-height 0.3s ease 0s;
+		@media (max-width: $mobile) {
+			min-height: toRem(70);
+		}
+	}
+
+	&__main {
+	}
+
+	&__actions {
+	}
+}
+.main-heading {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 60, 20, 2, $containerWidth, 767.98);
+	&__logo {
+		display: flex;
+		gap: toRem(8);
+		font-weight: 800;
+		align-items: end;
+		line-height: 150%;
+		height: toRem(36);
+		font-size: toRem(24);
+		font-family: $fontFamilyThird;
+		&::before {
+			font-size: toRem(32);
+			padding-bottom: toRem(6);
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(5);
+			font-size: toRem(18);
+			&::before {
+				font-size: toRem(22);
+				padding-bottom: toRem(4);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		@include adaptiveValue("gap", 48, 20, 2, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__item {
+		position: relative;
+		&:first-child {
+			.main-heading__link {
+				&::after {
+					display: none;
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.main-heading__option {
+					opacity: 1;
+					visibility: visible;
+				}
+				.main-heading__link {
+					color: $primary100Color;
+					&::before {
+						transform: rotate(-180deg) translateY(toRem(-2));
+					}
+				}
+			}
+		}
+	}
+
+	&__link {
+		gap: toRem(8);
+		display: flex;
+		font-weight: 500;
+		position: relative;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: row-reverse;
+		transition: color 0.3s ease 0s;
+		&::before {
+			transform: translateY(toRem(2));
+			transition: transform 0.3s ease 0s;
+		}
+		&::after {
+			width: 0;
+			content: "";
+			left: toRem(0);
+			right: toRem(0);
+			height: toRem(2);
+			bottom: toRem(-10);
+			position: absolute;
+			margin: toRem(0) auto;
+			border-radius: toRem(10);
+			transition: width 0.3s ease 0s;
+			background-color: $primary100Color;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primary100Color;
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__option {
+		opacity: 0;
+		top: toRem(25);
+		left: toRem(0);
+		visibility: hidden;
+		position: absolute;
+		white-space: nowrap;
+		display: inline-block;
+		border-radius: toRem(3);
+		color: $neutral100Color;
+		padding: toRem(10) toRem(12);
+		background-color: $neutral10Color;
+		transition:
+			opacity 0.5s ease 0s,
+			visibility 0.5s ease 0s;
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	}
+
+	&__list-opt {
+		display: grid;
+		gap: toRem(10);
+	}
+
+	&__item-opt {
+	}
+
+	&__link-opt {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primary100Color;
+			}
+		}
+	}
+}
+.actions-heading {
+	display: flex;
+	@include adaptiveValue("gap", 16, 8, 0, $containerWidth, 767.98);
+	&__button {
+	}
+}
+//========================================================================================================================================================

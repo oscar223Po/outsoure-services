@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"O&Lance (Landing - Courses) - CoursesPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-landings.htm',{})
+		<main class="page">
+			<!-- [Browse] -->
+			<section class="browse">
+				<div class="browse__container-min">
+					<div class="browse__headed headed headed--white headed--center">
+						<h3 class="headed__title title title--large">Browse in EdTech</h3>
+						<div class="headed__text text text--large">
+							<p>Browse learning content designed to help your business or career. You can learn by choosing a course, event or dive right in on a 1 on 1 call with the author.</p>
+						</div>
+					</div>
+					<div class="browse__search search">
+						<div class="search__main">
+							<input autocomplete="off" type="text" name="form[]" data-error="Error"
+								placeholder="Search course, event or author" class="search__input">
+							<div class="search__select">
+								<select name="form[]" data-class-modif="search">
+									<option value="1" selected>Courses №1</option>
+									<option value="2">Courses №2</option>
+									<option value="3">Courses №3</option>
+								</select>
+							</div>
+							<button type="button" class="search__button _icon-search"></button>
+						</div>
+						<div class="search__tip">Popular : UI Design, UX Research, Android, C++</div>
+					</div>
+				</div>
+			</section>
+			<!-- [Category] -->
+			<section class="category">
+				<div class="category__container-min">
+					<aside class="category__aside aside-category aside-category--disabled">
+						<div data-spollers class="aside-category__spollers">
+							<details data-open class="aside-category__item">
+								<summary class="aside-category__title _icon-plus">Categories</summary>
+								<div class="aside-category__body">
+									<div class="checkbox">
+										<input id="c_1" data-error="Error" checked class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_1" class="checkbox__label"><span class="checkbox__text">UI/UX Design (160)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_2" data-error="Error" class="checkbox__input" type="checkbox" value="2" name="form[]">
+										<label for="c_2" class="checkbox__label"><span class="checkbox__text">Graphic Design (94)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_3" data-error="Error" class="checkbox__input" type="checkbox" value="3" name="form[]">
+										<label for="c_3" class="checkbox__label"><span class="checkbox__text">3D & Animation (21)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_4" data-error="Error" class="checkbox__input" type="checkbox" value="4" name="form[]">
+										<label for="c_4" class="checkbox__label"><span class="checkbox__text">Game Design (20)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_5" data-error="Error" checked class="checkbox__input" type="checkbox" value="5" name="form[]">
+										<label for="c_5" class="checkbox__label"><span class="checkbox__text">Front-End (43)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_6" data-error="Error" class="checkbox__input" type="checkbox" value="6" name="form[]">
+										<label for="c_6" class="checkbox__label"><span class="checkbox__text">Back-End (72)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_7" data-error="Error" class="checkbox__input" type="checkbox" value="7" name="form[]">
+										<label for="c_7" class="checkbox__label"><span class="checkbox__text">Data Science (65)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="c_8" data-error="Error" class="checkbox__input" type="checkbox" value="8" name="form[]">
+										<label for="c_8" class="checkbox__label"><span class="checkbox__text">IOT (65)</span></label>
+									</div>
+								</div>
+							</details>
+							<details data-open class="aside-category__item">
+								<summary class="aside-category__title _icon-plus">Course Duration</summary>
+								<div class="aside-category__body">
+									<div class="checkbox">
+										<input id="i_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="i_1" class="checkbox__label"><span class="checkbox__text">Under 2 Hours (24)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="i_2" data-error="Error" class="checkbox__input" type="checkbox" value="2" name="form[]">
+										<label for="i_2" class="checkbox__label"><span class="checkbox__text">2-10 Hours (16)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="i_3" data-error="Error" checked class="checkbox__input" type="checkbox" value="3" name="form[]">
+										<label for="i_3" class="checkbox__label"><span class="checkbox__text">11-20 Hours (40)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="i_4" data-error="Error" class="checkbox__input" type="checkbox" value="4" name="form[]">
+										<label for="i_4" class="checkbox__label"><span class="checkbox__text">20+ Hours (20)</span></label>
+									</div>
+								</div>
+							</details>
+							<details data-open class="aside-category__item">
+								<summary class="aside-category__title _icon-plus">Level</summary>
+								<div class="aside-category__body">
+									<div class="checkbox">
+										<input id="l_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="l_1" class="checkbox__label"><span class="checkbox__text">Beginer (20)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="l_2" data-error="Error" checked class="checkbox__input" type="checkbox" value="2" name="form[]">
+										<label for="l_2" class="checkbox__label"><span class="checkbox__text">Intermediate (43)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="l_3" data-error="Error" class="checkbox__input" type="checkbox" value="3" name="form[]">
+										<label for="l_3" class="checkbox__label"><span class="checkbox__text">Expert (30)</span></label>
+									</div>
+								</div>
+							</details>
+							<details data-open class="aside-category__item">
+								<summary class="aside-category__title _icon-plus">Price</summary>
+								<div class="aside-category__body">
+									<div class="checkbox">
+										<input id="v_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="v_1" class="checkbox__label"><span class="checkbox__text">Paid (160)</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="v_2" data-error="Error" class="checkbox__input" type="checkbox" value="2" name="form[]">
+										<label for="v_2" class="checkbox__label"><span class="checkbox__text">Free (20)</span></label>
+									</div>
+								</div>
+							</details>
+						</div>
+						<div class="aside-category__tools">
+							<button type="button" class="aside-category__reset">
+								<svg viewBox="0 0 20 20" fill="none">
+									<path d="M13.7656 7.78906H17.5156V4.03906" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M14.8594 14.8594C13.8981 15.8214 12.6731 16.4768 11.3393 16.7425C10.0056 17.0082 8.62295 16.8724 7.36638 16.3522C6.10981 15.832 5.03575 14.9508 4.28007 13.8201C3.52439 12.6894 3.12103 11.36 3.12103 10C3.12103 8.64002 3.52439 7.31058 4.28007 6.17987C5.03575 5.04917 6.10981 4.16798 7.36638 3.64779C8.62295 3.12761 10.0056 2.99179 11.3393 3.25752C12.6731 3.52324 13.8981 4.17858 14.8594 5.14063L17.5156 7.78907" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Reset Filter</span>
+							</button>
+							<button type="button" class="aside-category__close">Close</button>
+						</div>
+					</aside>
+					<div data-tabs class="category__tabs tabs-category">
+						<div class="tabs-category__navigation navigation">
+							<nav data-tabs-titles class="navigation__navs">
+								<button type="button" class="navigation__title _tab-active">Courses</button>
+								<button type="button" class="navigation__title">Events (160)</button>
+								<button type="button" class="navigation__title">Authors (160)</button>
+							</nav>
+						</div>
+						<div class="tabs-category__info">
+							<h3 class="tabs-category__title title title--normal">Showing 160 results</h3>
+							<div class="tabs-category__sort">
+								<button type="button" class="tabs-category__filter _icon-bound">Filter</button>
+								<h5>Sort by:</h5>
+								<select name="form[]" data-class-modif="sort">
+									<option value="1" selected>Most Poppular</option>
+									<option value="2">Less Poppular</option>
+								</select>
+							</div>
+						</div>
+						<div data-tabs-body class="tabs-category__content">
+							<div class="tabs-category__articles articles">
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+							</div>
+							<div class="tabs-category__articles articles">
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+							</div>
+							<div class="tabs-category__articles articles">
+								<article class="articles__item">
+									<div class="articles__main">
+										<a href="" class="articles__image"><img src="@img/landing-pages/home-page/popular/image-01.jpg" alt="Image"></a>
+										<div class="articles__content">
+											<a href="" class="articles__title">UX Design Foundations</a>
+											<div class="articles__info">
+												<div class="articles__name">By Sen Janson</div>
+												<div class="articles__review _icon-rate">4.8 (122)</div>
+											</div>
+											<div class="articles__labels labels-course">
+												<div class="labels-course__item _icon-clock">40 Min</div>
+												<div class="labels-course__item _icon-stack">21 Modules</div>
+												<div class="labels-course__item _icon-level">Beginer Level</div>
+											</div>
+										</div>
+									</div>
+									<div class="articles__price title title--normal">$128</div>
+								</article>
+							</div>
+						</div>
+						<div class="tabs-category__pagination pagination">
+							<a href="" class="pagination__button pagination__button--prew _icon-ar-trig"></a>
+							<ul class="pagination__list">
+								<li class="pagination__item"><a href="" class="pagination__link pagination__link--active">1</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">4</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">5</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">···</a></li>
+								<li class="pagination__item"><a href="" class="pagination__link">10</a></li>
+							</ul>
+							<a href="" class="pagination__button pagination__button--next _icon-ar-trig"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

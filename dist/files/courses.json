@@ -1,0 +1,52 @@
+{
+	"items": [
+		{
+			"id": 1,
+			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"title": "UX Design Foundations",
+			"url": "https://google.com",
+			"name": "By Ramazan Yenici",
+			"rate": "4.8 (122)",
+			"price": "$128",
+			"clock": "40 Min",
+			"stack": "21 Modules",
+			"level": "Beginner Level"
+		},
+		{
+			"id": 2,
+			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"title": "UI/UX Design Terminology",
+			"url": "https://google.com",
+			"name": "By Ramazan Yenici",
+			"rate": "3.4 (43)",
+			"price": "$143",
+			"clock": "25 Min",
+			"stack": "30 Modules",
+			"level": "Entery Level"
+		},
+		{
+			"id": 3,
+			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"title": "UI/UX Design Terminology",
+			"url": "https://google.com",
+			"name": "By Ramazan Yenici",
+			"rate": "4.5 (154)",
+			"price": "$100",
+			"clock": "35 Min",
+			"stack": "15 Modules",
+			"level": "Advance Level"
+		},
+		{
+			"id": 4,
+			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"title": "UI/UX Design Terminology",
+			"url": "https://google.com",
+			"name": "By Ramazan Yenici",
+			"rate": "4.8 (122)",
+			"price": "$30",
+			"clock": "40 Min",
+			"stack": "21 Modules",
+			"level": "Beginner Level"
+		}
+	]
+}
