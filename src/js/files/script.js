@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		courseItemTemplate += `<article data-id="${item.id}" class="course">`;
 
-		item.image ? courseItemTemplate += `<div class="course__image"><img src="${item.image}" alt="Image"></div>` : null;
+		item.image ? courseItemTemplate += `<a href="${item.url}" class="course__image"><img src="${item.image}" alt="Image"></a>` : null;
 
 		courseItemTemplate += `<div class="course__content">`;
 

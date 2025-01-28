@@ -1748,8 +1748,13 @@ summary::marker {
     border-radius: .5rem
   }
 }
+.course__image {
+  display: flex
+}
 .course__image img {
-  width: 100%
+  width: 100%;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01)
 }
 .course__content {
   display: grid;

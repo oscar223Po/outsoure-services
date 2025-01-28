@@ -17195,7 +17195,7 @@
         function buildCourseItem(item) {
             let courseItemTemplate = ``;
             courseItemTemplate += `<article data-id="${item.id}" class="course">`;
-            item.image ? courseItemTemplate += `<div class="course__image"><img src="${item.image}" alt="Image"></div>` : null;
+            item.image ? courseItemTemplate += `<a href="${item.url}" class="course__image"><img src="${item.image}" alt="Image"></a>` : null;
             courseItemTemplate += `<div class="course__content">`;
             courseItemTemplate += `<a target="_blank" href="${item.url}" class="course__title">${item.title}</a>`;
             courseItemTemplate += `<div class="course__form form-course">`;

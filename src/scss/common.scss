@@ -282,11 +282,12 @@ summary {
 		border-radius: toRem(8);
 	}
 	&__image {
+		display: flex;
 		img {
 			width: 100%;
+			transform: scale(1.01);
 		}
 	}
-
 	&__content {
 		display: grid;
 		border-left: toRem(1) solid $neutral40Color;
