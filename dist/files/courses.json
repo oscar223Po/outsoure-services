@@ -2,7 +2,7 @@
 	"items": [
 		{
 			"id": 1,
-			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"image": "../img/landing-pages/home-page/popular/image-01.jpg",
 			"title": "UX Design Foundations",
 			"url": "https://google.com",
 			"name": "By Ramazan Yenici",
@@ -14,7 +14,7 @@
 		},
 		{
 			"id": 2,
-			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"image": "../img/landing-pages/home-page/popular/image-01.jpg",
 			"title": "UI/UX Design Terminology",
 			"url": "https://google.com",
 			"name": "By Ramazan Yenici",
@@ -26,7 +26,7 @@
 		},
 		{
 			"id": 3,
-			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"image": "../img/landing-pages/home-page/popular/image-01.jpg",
 			"title": "UI/UX Design Terminology",
 			"url": "https://google.com",
 			"name": "By Ramazan Yenici",
@@ -38,7 +38,7 @@
 		},
 		{
 			"id": 4,
-			"image": "img/landing-pages/home-page/popular/image-01.jpg",
+			"image": "../img/landing-pages/home-page/popular/image-01.jpg",
 			"title": "UI/UX Design Terminology",
 			"url": "https://google.com",
 			"name": "By Ramazan Yenici",

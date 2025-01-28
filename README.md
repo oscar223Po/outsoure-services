@@ -1,8 +1,15 @@
 # Freelance Website & Adaptive "Olance-Services"
-JavaScript Project "Olance-Services" With Global Functional Of JavaScript
+The Olance-Services website is a versatile platform dedicated to connecting freelancers with clients while also offering professional training opportunities. Our service focuses on creating a seamless and productive environment for collaboration, skill-building, and career growth. Whether you're looking for top-notch freelance professionals in fields like design, writing, programming, or marketing, or aiming to enhance your own expertise through comprehensive courses, Olance-Services brings together a community of skilled individuals and learners, supported by intuitive tools and resources to succeed.
 
-![1](https://github.com/user-attachments/assets/73aff94b-081b-43a3-ab6e-296122886c2f)
+![Preview](./src/preview.png)
 
-➼ Technology stack: HTML (HTML5), CSS (CSS3), JavaScript, SCSS/Sass, GULP, (Flexbox - Grid), BEM.
+➼ Technology Stack:
+- HTML5 for structure
+- CSS3 for styling
+- SCSS/Sass for advanced styling and better maintainability
+- JavaScript for dynamic functionality
+- Gulp for task automation
+- Flexbox & Grid for responsive design
+- BEM methodology for clean, scalable code
 
-Site Of "Freelance Services" O&Lance JavaScript
+This tech stack ensures a seamless user experience across all devices, providing an intuitive interface with practical elements such as online consultation bookings and informative sections about the clinic’s services and medical team.
