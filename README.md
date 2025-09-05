@@ -1,6 +1,6 @@
-# 🚀 Freelance Website & Adaptive "Olance-Services"
+# 🌎 Olance — Website Freelance Services
 
-The Olance-Services website connects freelancers with clients and offers professional training opportunities. It’s a hub for collaboration, skill-building, and career growth, bringing together talented professionals and learners with intuitive tools to succeed.
+The Olance Services website connects freelancers with clients and offers professional training opportunities. It’s a hub for collaboration, skill-building, and career growth, bringing together talented professionals and learners with intuitive tools to succeed.
 
 ---
 
